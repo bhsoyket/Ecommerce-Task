@@ -1,13 +1,35 @@
 .Cart {
-    box-shadow: 2px 5px 10px #ccc;
+    border-top: 1px solid #ccc;
+    box-shadow: 1px 2px 5px #ccc;
     background-color: rgb(253, 252, 250);
-    border-radius: 5px;
     height: 10vh;
     padding: 5px;
-    display: flex;
-    justify-content: center;
+}
+.QuantityInput{ 
+    width: 30px;
+}
+
+.DeleteCartItem{
+    margin-top: 10px;
+}
+
+.DeleteCartItem a{
+    color: #DA5166;
+
+}
+.CartItemMT {
+    margin-top: 5px;
+}
+.OrderProductPrice{
+    margin-left: 3px;
+}
+.ProductInfo{
+    display: inline-block;
+    margin-left: 5px;
 }
 .Image {
+    display: inline-block;
+    overflow: hidden;
     width: 40px;
     height: 40px;
     background-color: #f97e00;
@@ -16,14 +38,11 @@
 .Name {
     font-weight: bold;
     font-size: 1.2rem;
-    /* padding-left: 1rem; */
 }
 .Quantity {
     color: #f97e00;
     font-size: 1rem;
-    /* padding-left: 1rem; */
 }
 .Price {
     font-size: 1rem;
-    /* padding-left: 1rem; */
 }

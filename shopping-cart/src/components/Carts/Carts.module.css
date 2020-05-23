@@ -4,13 +4,29 @@
     border-radius: 5px;
     height: 100vh;
 }
+
+.CartHeader {
+    padding: 10px;
+}
+
+.ClearBTN{
+    color: #000;
+}
 .Title {
     font-weight: bold;
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 18px;
 }
 .Footer {
-    display: flex;
-    justify-content: space-between;
-    
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.TotalPrice {
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+.OrderBTN {
+    background-color: #f97e00;
+    color: white;
 }

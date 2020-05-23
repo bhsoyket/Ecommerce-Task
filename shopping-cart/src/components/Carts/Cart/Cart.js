@@ -8,24 +8,21 @@ export default function Carts(props) {
 		<Aux>
 			<div className={classes.Cart}>
 				<Row>
-					<Col xs="3" sm="3" md="3">
-						<i class="far fa-heart"></i>
+					<Col md="5">
 						<div className={classes.Image}>
-							<img src="" alt="" />
+							<img src="https://picsum.photos/40" alt="" />
+						</div>
+						<div className={classes.ProductInfo}>
+							<p className={classes.Name}>Onion</p>
+							<p className={classes.Quantity}>1KG</p>
 						</div>
 					</Col>
-					<Col xs="3" sm="3" md="3">
-						<p className={classes.Name}>Onion</p>
-						<p className={classes.Quantity}>1KG</p>
+					<Col md="5" className={classes.CartItemMT}>
+						<input type="number" className={classes.QuantityInput} />
+						<span className={classes.OrderProductPrice}>&#2547;&nbsp;40.00</span>
 					</Col>
-					<Col xs="2" sm="2" md="2">
-						<Input type="number" value="1" />
-					</Col>
-					<Col xs="3" sm="3" md="3">
-						<p className={classes.Price}>&#2547;&nbsp;40.00</p>
-					</Col>
-					<Col xs="1" sm="1" md="1">
-						<i class="fas fa-times-circle"></i>
+					<Col md="1"  className={classes.DeleteCartItem}>
+						<a href=""><i class="fas fa-times-circle"></i></a>
 					</Col>
 				</Row>
 			</div>
