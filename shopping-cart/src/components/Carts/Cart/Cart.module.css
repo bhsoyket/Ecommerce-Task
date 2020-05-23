@@ -1,0 +1,29 @@
+.Cart {
+    box-shadow: 2px 5px 10px #ccc;
+    background-color: rgb(253, 252, 250);
+    border-radius: 5px;
+    height: 10vh;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.Image {
+    width: 40px;
+    height: 40px;
+    background-color: #f97e00;
+    border-radius: 5px;
+}
+.Name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* padding-left: 1rem; */
+}
+.Quantity {
+    color: #f97e00;
+    font-size: 1rem;
+    /* padding-left: 1rem; */
+}
+.Price {
+    font-size: 1rem;
+    /* padding-left: 1rem; */
+}

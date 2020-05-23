@@ -1,0 +1,9 @@
+.Border {
+    border: 1px solid #ccc;
+}
+.Header {
+    width: 100%;
+    height: 50px;
+    background-color: #f97e00;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,16 @@
+.Carts {
+    box-shadow: 2px 5px 10px #ccc;
+    background-color: rgb(253, 252, 250);
+    border-radius: 5px;
+    height: 100vh;
+}
+.Title {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    
+}
