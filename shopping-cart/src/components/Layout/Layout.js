@@ -11,6 +11,7 @@ export default class Layout extends Component {
 		Products: [],
 		cardItems: [],
 		totalPrice: 0,
+
 	};
 
 	componentDidMount() {
@@ -57,6 +58,24 @@ export default class Layout extends Component {
 		this.setState({ ...this.state, cardItems: [], totalPrice: 0, });
 	};
 
+	submitOrder = async () => {
+		try {
+			const response = await axios.post(
+				"http://localhost:4000/api/order",
+				{
+					products: this.state.cardItems,
+					totalPrice: this.state.totalPrice
+				}
+			);
+			console.log(response);
+			
+			// const resProducts = response.data.data;
+			// this.setState({ ...this.state, Products: resProducts });
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	render() {
 		return (
 			<Aux>
@@ -75,6 +94,7 @@ export default class Layout extends Component {
 								totalPrice={this.state.totalPrice}
 								RemoveToCard={this.RemoveToCard}
 								clearCard={this.clearCard}
+								submitOrder={this.submitOrder}
 							/>
 						</Col>
 					</Row>

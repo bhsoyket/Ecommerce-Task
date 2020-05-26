@@ -32,7 +32,7 @@ export default function Carts(props) {
 				<div className={classes.Footer}>
 					<Row>
 						<Col md="4">
-							<Button className={classes.OrderBTN}>
+							<Button onClick={()=>props.submitOrder()} className={classes.OrderBTN}>
 								Place Order
 							</Button>
 						</Col>
