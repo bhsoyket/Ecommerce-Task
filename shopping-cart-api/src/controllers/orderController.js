@@ -12,7 +12,7 @@ module.exports.createOrder = async (req, res,next) => {
 		return next(new Error('order creation failed' ));
 	}
 	
-	return res.status(200).json(createResponse({token}, 'order created successfully'));
+	return res.status(200).json(createResponse(order, 'order created successfully'));
 };
 
 //get all orders

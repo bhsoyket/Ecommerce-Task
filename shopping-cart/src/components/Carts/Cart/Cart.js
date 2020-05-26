@@ -10,19 +10,19 @@ export default function Carts(props) {
 				<Row>
 					<Col md="5">
 						<div className={classes.Image}>
-							<img src="https://picsum.photos/40" alt="" />
+							<img src={props.item.image} alt="" />
 						</div>
 						<div className={classes.ProductInfo}>
-							<p className={classes.Name}>Onion</p>
-							<p className={classes.Quantity}>1KG</p>
+							<p className={classes.Name}>{props.item.name}</p>
+							<p className={classes.Quantity}>{props.item.unit}</p>
 						</div>
 					</Col>
 					<Col md="5" className={classes.CartItemMT}>
-						<input type="number" className={classes.QuantityInput} />
-						<span className={classes.OrderProductPrice}>&#2547;&nbsp;40.00</span>
+						<Input type="number" className={classes.QuantityInput} />
+						<span className={classes.OrderProductPrice}>&#2547;&nbsp;{props.item.price}</span>
 					</Col>
 					<Col md="1"  className={classes.DeleteCartItem}>
-						<a href=""><i class="fas fa-times-circle"></i></a>
+						<i onClick={()=>props.RemoveToCard(props.item._id)} className="fas fa-times-circle"></i>
 					</Col>
 				</Row>
 			</div>

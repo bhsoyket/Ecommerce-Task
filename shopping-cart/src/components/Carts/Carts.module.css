@@ -7,10 +7,12 @@
 
 .CartHeader {
     padding: 10px;
+    /* background-color: #eee; */
 }
 
 .ClearBTN{
     color: #000;
+    cursor: pointer;
 }
 .Title {
     font-weight: bold;

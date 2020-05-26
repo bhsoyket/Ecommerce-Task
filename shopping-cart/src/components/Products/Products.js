@@ -1,67 +1,24 @@
-import React, { Component } from "react";
-
+import React from 'react';
 import Aux from "../../hoc/Aux";
-import Product from "../../components/Product/Product";
+import Product from "../Product/Product";
 import classes from "./Products.module.css";
 import { Row } from "reactstrap";
 
-export default class Products extends Component {
-	state = {
-		Products: [
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-			{
-				name: "Onion",
-				quantity: "1KG",
-				price: 45,
-				image: "onion.jpg",
-			},
-		],
-	};
-	render() {
-		return (
-			<Aux>
-                <p className={classes.Title}>Your Products</p>
-				<Row>
-					{this.state.Products.map((prod) => {
-						return <Product product={prod} />;
-					})}
-				</Row>
-			</Aux>
-		);
-	}
+const Products = (props) => {
+	return (
+		<Aux>
+			<p className={classes.Title}>Your Products</p>
+			<Row>
+				{props.Products.map((prod, i) => {
+					return (<Product 
+						key={i} 
+						product={prod}
+						addToCard={props.addToCard}
+						/>);
+				})}
+			</Row>
+		</Aux>
+	);
 }
+
+export default Products;
